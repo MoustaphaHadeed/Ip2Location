@@ -3,26 +3,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp"
+    android:background="@color/grey_50"
     android:gravity="center"
+    android:layoutDirection="rtl"
     android:orientation="vertical"
+    android:padding="32dp"
     tools:context="com.mustaphahadid.ip2location.MainActivity"
     >
   <EditText
       android:id="@+id/ip_address"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:digits="0123456789."
       android:gravity="center"
       android:hint="@string/input_enter_ip"
+      android:inputType="number"
+      android:textDirection="rtl"
       />
   <Button
+      android:id="@+id/button_search"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="16dp"
+      android:onClick="onSearchBtnClicked"
       android:text="@string/action_search_for_location"
       android:textSize="15sp"
       android:textStyle="bold"
       style="@style/Widget.AppCompat.Button.Colored"
-      android:onClick="onSearchBtnClicked"
       />
+  <ProgressBar
+      android:id="@+id/progress_bar_search"
+      android:layout_width="wrap_content"
+      android:layout_height="48dp"
+      android:layout_marginTop="16dp"
+      android:indeterminate="true"
+      android:padding="8dp"
+      android:visibility="gone"
+      />
+  <GridLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:background="@color/grey_200"
+      android:columnCount="2"
+      android:paddingBottom="32dp"
+      android:paddingStart="8dp"
+      android:paddingTop="32dp"
+      tools:ignore="RtlSymmetry"
+      >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/caption_country"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+    <TextView
+        android:id="@+id/text_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/caption_city"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+    <TextView
+        android:id="@+id/text_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/caption_isp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+    <TextView
+        android:id="@+id/text_isp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        />
+  </GridLayout>
 </LinearLayout>

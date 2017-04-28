@@ -3,4 +3,13 @@
   <string name="input_enter_ip">ادخل عنوان ال IP</string>
   <string name="action_search_for_location">ابحث عن الموقع</string>
   <string name="msg_empty_field">الحقل فارغ!</string>
+  <string name="caption_country">البلد</string>
+  <string name="caption_city">المدينة</string>
+  <string name="caption_isp">مزود الخدمة</string>
+  <string name="action_ok">حسناً</string>
+  <string name="msg_http_request_failed">تاكد من توفر اتصال بالانترنت واعد المحاولة</string>
+  <string name="title_http_request_failed">فشل الاتصال</string>
+  <string name="title_http_error_response">فشل الاتصال</string>
+  <string name="msg_http_error_response">هنالك مشكلة في اجابة السيرفر. يرجى اعادة المحاولة في وقت لاحق</string>
+  <string name="msg_not_a_valid_ip_address">العنوان غير صالح!</string>
 </resources>
