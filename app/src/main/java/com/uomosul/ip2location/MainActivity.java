@@ -1,9 +1,11 @@
-package com.mustaphahadid.ip2location;
+package com.uomosul.ip2location;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +46,17 @@ public class MainActivity extends AppCompatActivity {
     mIspTextView = (TextView) findViewById(R.id.text_isp);
     mSearchProgressBar = (ProgressBar) findViewById(R.id.progress_bar_search);
     mSearchButton = (Button) findViewById(R.id.button_search);
+
+    // Get screen width in px
+    Resources resources = this.getResources();
+    DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+    int screenWidth = displayMetrics.widthPixels;
+
+    // Set text view to half of screen width
+    int width = (int) (screenWidth * 0.5);
+    mCityTextView.setWidth(width);
+    mCountryTextView.setWidth(width);
+    mIspTextView.setWidth(width);
 
     mClient = new OkHttpClient();
   }

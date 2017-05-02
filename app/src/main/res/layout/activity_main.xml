@@ -8,7 +8,7 @@
     android:layoutDirection="rtl"
     android:orientation="vertical"
     android:padding="32dp"
-    tools:context="com.mustaphahadid.ip2location.MainActivity"
+    tools:context="com.uomosul.ip2location.MainActivity"
     >
   <EditText
       android:id="@+id/ip_address"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/caption_country"
+        android:text="@string/caption_city"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         />
     <TextView
@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/caption_city"
+        android:text="@string/caption_country"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         />
     <TextView

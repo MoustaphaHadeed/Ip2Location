@@ -1,4 +1,4 @@
-package com.mustaphahadid.ip2location;
+package com.uomosul.ip2location;
 
 import com.google.gson.annotations.SerializedName;
 
